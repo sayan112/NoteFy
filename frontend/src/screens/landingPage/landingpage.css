@@ -1,0 +1,64 @@
+.main{
+     
+    min-height:  130vh;
+    display: flex;
+    align-items: center;
+    background-image: url("./landingPageImg_auto_x2_colored_toned_light_ai.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.title{
+    font-size: 2.1rem;
+}
+.subtitle {
+     font-size: 1.1rem;
+     padding-top: 10px;
+}
+.intro-text {
+    width: 100%;
+    text-align: center;
+}
+
+.buttonContainer {
+    margin-top: 50px;
+    display: flex;
+   justify-content: center;
+}
+.landingbuttonlogin , .landingbuttonSignup {
+    width: 200px;
+    height: 55px;
+}
+
+.landingbuttonlogin {
+    margin-right: 10px;
+
+
+}
+
+@media only screen and (max-width: 600px) {
+
+    .title {
+        font-size: 2.1rem;
+    }
+
+    .landingbuttonlogin,
+    .landingbuttonSignup {
+        width: 100px;
+        height: 40px;
+    }
+}
+
+
+@media only screen and (min-device-width: 600px) and (max-device-width: 1087px) {
+
+        .title {
+                font-size: 2.1rem;
+            }
+        
+            .landingbuttonlogin,
+            .landingbuttonSignup {
+                width: 150px;
+                height: 40px;
+            }
+}
+
