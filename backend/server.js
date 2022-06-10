@@ -1,32 +1,35 @@
 const express = require("express");
 const notes = require("./data/notes");
- const dotenv= require("dotenv");
+const dotenv = require("dotenv");
+const connectDB = require("./config/db");
+const userRoutes = require("./routes/userRoutes");
+const { notFound, errorHandler } = require("./Middleware/erorMiddleware");
 
- const connectDB=require("./config/db");
-  const app = express();
+const app = express();
 dotenv.config();
 
 connectDB();
+app.use(express.json());
 
-const PORT= process.env.PORT || 4000 ;
+app.get("/", (req, res) => {
+  res.send("hey its butter :) ");
+});
 
-  app.get("/",(req,res)=>{
-      res.send("hey its running like a pussy lol op dope ");
-  
-  }
-    );
+//  app.get ("/api/sayan/notes", (req,res)=>{
+//      res.send(notes);
+//  })
 
- app.get ("/api/sayan/notes", (req,res)=>{
-     res.send(notes);
- })
+app.use("/api/users", userRoutes);
+app.use(notFound);
+app.use(errorHandler);
 
+// app.get("/api/sayan/notes/:id",(req,res)=>{
 
+//     const note = notes.find((n)=>n._id===req.params.id);
+//      res.send(note);
+// })
 
-app.get("/api/sayan/notes/:id",(req,res)=>{
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, console.log(`hey server is startedop lol ${PORT}`));
 
-    const note = notes.find((n)=>n._id===req.params.id);
-     res.send(note);
-})
-
-app.listen(PORT,  console.log(`hey server is startedop lol ${PORT}`));
 

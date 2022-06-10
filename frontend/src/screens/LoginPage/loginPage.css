@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+    box-sizing: border-box;
+}
+
+
+.loginContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+}
