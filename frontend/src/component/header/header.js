@@ -1,8 +1,9 @@
 import React from 'react'
 import { Container, Form, FormControl, Nav, Navbar, NavDropdown } from "react-bootstrap"
-import  {  Link } from "react-router-dom"
+import  {  Link, useHistory } from "react-router-dom"
 
-const header = () => {
+const Header = () => {
+   const history= useHistory();
   return (
     <Navbar bg="primary" expand="lg" variant="dark">
       <Container>
@@ -28,7 +29,12 @@ const header = () => {
             <NavDropdown title="Sayan" id="basic-nav-dropdown">
               <NavDropdown.Item href="#action/3.1">My profile</NavDropdown.Item>
               <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">Log Out</NavDropdown.Item>
+              <NavDropdown.Item onClick={
+                ()=>{
+                  localStorage.removeItem("userInfo");
+history.push("/");
+                }
+              } >Log Out</NavDropdown.Item>
             </NavDropdown>
           </Nav>
         </Navbar.Collapse>
@@ -37,4 +43,9 @@ const header = () => {
   );
 }
 
-export default header
+export default Header
+
+
+
+
+// {"_id":{"$oid":"62b2b8e4f606a7e57a816e71"},"name":"testuser1","email":"testuser1@gmail.com","password":"$2a$10$u1hKWdbtVeOszM3M7PgQ7OEKZEK4VFGxAn8qavzBn65adhu7ZgVh2","isAdmin":false,"pic":"https://www.kindpng.com/picc/m/269-2697881_computer-icons-user-clip-art-transparent-png-icon.png","createdAt":{"$date":{"$numberLong":"1655879908187"}},"updatedAt":{"$date":{"$numberLong":"1655879908187"}},"__v":{"$numberInt":"0"}}
