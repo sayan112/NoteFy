@@ -6,6 +6,7 @@ import Mynotes from "./screens/Mynotes/Mynotes.js";
 import LogInPage from "./screens/LoginPage/LogInPage";
 import RegisterPage from "./screens/RegisterPage/RegisterPage";
 const App = () => {
+  
   return (
     <BrowserRouter>
       <Header />

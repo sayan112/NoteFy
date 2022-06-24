@@ -1,20 +1,35 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Col, Form, FormGroup, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainScreen from "../../component/MainScreen";
 import "./loginPage.css";
-import axios from "axios";
+ import axios from "axios";
 import Loading from "../../component/loading";
 import ErrorMessage from "../../component/erormessage";
+import {useDispatch, useSelector} from "react-redux";
 
 const LogInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [error, setError] = useState(false);
-  const [loading, setLoading] = useState(false);
+   const [error, setError] = useState(false);
+   const [loading, setLoading] = useState(false);
+
+
+
+//    const dispatch = useDispatch()
+// const userLogin=useSelector((state)=>state.userLogin);
+// const {loading,error,userInfo}=userLogin;
+// useEffect(()=>{
+//   if(userInfo)
+//   {
+//     history.push("/mynotes");
+//   }
+// },[history,userInfo]);
 
   const submitHandeler = async (e) => {
     e.preventDefault();
+ 
+
     //  just for check
     console.log(email, password);
     // now its time to call api

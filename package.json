@@ -12,6 +12,7 @@
   "author": "sayan maitra",
   "license": "ISC",
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.2",
     "bcryptjs": "^2.4.3",
     "concurrently": "^7.2.1",
     "dotenv": "^16.0.1",
