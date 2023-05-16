@@ -14,9 +14,12 @@ const reducer = combineReducers({
   
   UserLogin:userLoginReducer ,
 });
+const userInfoFromStorage = localStorage.getItem("userInfo")
+  ? JSON.parse(localStorage.getItem("userInfo"))
+  : null;
 
-export const initialState = {
-  userLogin:{}
+const initialState = {
+  userLogin: { userInfo: userInfoFromStorage },
 };
 
   const middleware= [thunk];
@@ -26,4 +29,5 @@ export const initialState = {
     composeWithDevTools(applyMiddleware(...middleware))
   );
    export default store;
+
 

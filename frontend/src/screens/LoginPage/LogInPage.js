@@ -13,15 +13,12 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 const LogInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-   const [error, setError] = useState(false);
-   const [loading, setLoading] = useState(false);
+  //  const [error, setError] = useState(false);
+  //  const [loading, setLoading] = useState(false);
    const history= useHistory();
-
-
-
    const dispatch = useDispatch()
 const userLogin=useSelector((state)=>state.UserLogin);
- const { userInfo } = userLogin;
+ const { userInfo,error,loading } = userLogin;
 // console.log(userLogin);
  if(userLogin)
  {
@@ -32,48 +29,10 @@ const userLogin=useSelector((state)=>state.UserLogin);
       history.push("/mynotes");
     }
   }, [history, userInfo]);
-// const {userInfo}=userLogin;
-// useEffect(()=>{
-//   if(userInfo)
-//   {
-//     history.push("/mynotes");
-//   }
-// },[history,userInfo]);
 
   const submitHandeler = async (e) => {
     e.preventDefault();
      dispatch(login(email,password));
- 
-// it is now beign handeled with redux 
-//     //  just for check
-//     console.log(email, password);
-//     // now its time to call api
-
-//     try {
-
-//       const config = {
-//         headers: {
-//           "Content-type": "application/json",
-//         },
-//       };
-//       setLoading(true);
-//       const { data } = await axios.post(
-//         "api/users/login",
-//         {
-//           email,
-//           password,
-//         },
-//         config
-//       );
-//        console.log(data);
-
-//  localStorage.setItem('userInfo',JSON.stringify(data) );
-
-//       setLoading(false);
-//     } catch (error) {
-//       setError(error.response.data.message);
-//          setLoading(false);
-//     }
   };
 
   return (
