@@ -4,10 +4,10 @@ const dotenv = require("dotenv");
 const connectDB = require("./config/db");
 const userRoutes = require("./routes/userRoutes");
 const { notFound, errorHandler } = require("./Middleware/erorMiddleware");
-
+const cors =require("cors");
 const app = express();
 dotenv.config();
-
+app.use(cors());
 connectDB();
 app.use(express.json());
 
@@ -15,9 +15,9 @@ app.get("/", (req, res) => {
   res.send("hey its butter :) ");
 });
 
-//  app.get ("/api/sayan/notes", (req,res)=>{
-//      res.send(notes);
-//  })
+ app.get ("/api/sayan/notes", (req,res)=>{
+     res.send(notes);
+ })
 
 app.use("/api/users", userRoutes);
 app.use(notFound);

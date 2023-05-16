@@ -13,7 +13,8 @@ const Mynotes = () => {
  const[notes,setNotes]=useState([]);
 
    const fetchNotes = async()=>{
-     const {data} = await axios.get("/api/sayan/notes");
+     const { data } = await axios.get("http://localhost:5000/api/sayan/notes");
+      console.log(data);
    setNotes(data);
    }
 

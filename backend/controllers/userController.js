@@ -44,16 +44,6 @@ const registerUser= asyncHandeler(  async(req,res)=>{
     // });
 
 });
-
-
-
-
-
-
-
-
-
-
 const authUser = asyncHandeler(async (req, res) => {
   const { name, email, password, pic } = req.body; // we are requesting from user
   const user = await User.findOne({email}); 

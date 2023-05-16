@@ -12,8 +12,6 @@ const App = () => {
       <Header />
 
       <main>
-        {/* <LandingPage /> */}
-
         <Route path="/" component={LandingPage} exact />
         <Route path="/login" component={ LogInPage} exact />
         <Route path="/register" component={RegisterPage} exact />
