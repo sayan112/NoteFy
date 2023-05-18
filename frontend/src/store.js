@@ -5,7 +5,7 @@ import {
 } from "redux";
 import { composeWithDevTools } from  'redux-devtools-extension';
 import thunk from "redux-thunk";
-import userLoginReducer from "../src/reducers/userReducers"
+import userLoginReducer, { userRegisterReducer } from "../src/reducers/userReducers"
 
 
 const reducer = combineReducers({
@@ -13,6 +13,7 @@ const reducer = combineReducers({
   // for now I only pass userLogin 
   
   UserLogin:userLoginReducer ,
+   UserRegister:userRegisterReducer,
 });
 const userInfoFromStorage = localStorage.getItem("userInfo")
   ? JSON.parse(localStorage.getItem("userInfo"))
