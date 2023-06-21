@@ -3,7 +3,6 @@ import { Button, Col, Form, FormGroup, Row } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import MainScreen from "../../component/MainScreen";
 import "./loginPage.css";
- import axios from "axios";
 import Loading from "../../component/loading";
 import ErrorMessage from "../../component/erormessage";
 import {useDispatch, useSelector} from "react-redux";
@@ -13,17 +12,12 @@ import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
 const LogInPage = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  //  const [error, setError] = useState(false);
-  //  const [loading, setLoading] = useState(false);
+
    const history= useHistory();
    const dispatch = useDispatch()
 const userLogin=useSelector((state)=>state.UserLogin);
  const { userInfo,error,loading } = userLogin;
-// console.log(userLogin);
- if(userLogin)
- {
-   console.log(userInfo);
- }
+
   useEffect(() => {
     if (userInfo) {
       history.push("/mynotes");

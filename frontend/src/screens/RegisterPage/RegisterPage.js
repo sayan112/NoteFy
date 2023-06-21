@@ -19,8 +19,6 @@ const RegisterPage = () => {
   );
 
   const [confirmPassword, setConfirmPassword] = useState("");
-  //  const [error, setError] = useState(false);
-  //  const [loading, setLoading] = useState(false);
   const [password, setPassword] = useState("");
   const [message, setMessage] = useState(null);
   const [picMessage, setPicMessage] = useState(null);
@@ -40,32 +38,6 @@ const RegisterPage = () => {
     } else {
       dispatch(register(name, email, password, pic));
     }
-
-    //     try {
-    //       const config ={
-    //         headers:{
-    //   "Content-type":"application/json",
-    //         },
-    //       };
-    //  setLoading(true);
-    //  const{data}=await axios.post(
-    //   "/api/users",
-    //   {
-
-    //     name,pic,email,password
-    //   },
-
-    //   config
-    //  );
-    //   setLoading(false);
-    //   localStorage.setItem("userInfo",JSON.stringify(data));
-    //     console.log(data);
-
-    //     } catch (error) {
-
-    //       setError(error.response.data.message);
-
-    //     }
   };
 
   const postDetails = (pics) => {
