@@ -1,8 +1,8 @@
-# Note Zipper
+# NoteFy
 <table>
 <tr>
 <td>
-  Note Zipper provides you one safe place for all your notes.
+   NoteFy provides you with one safe place for all your notes.
 </td>
 </tr>
 </table>
@@ -19,7 +19,7 @@ Here is a working live demo :
 ![](https://github.com/sayan112/NoteFy/blob/main/images/NotesAppLandingPage.png)
 
 ### Login Form
-You can register a new account or login with an existing one.
+You can register a new account or log in with an existing one.
 
 ![](https://github.com/sayan112/NoteFy/blob/main/images/login.png)
 
