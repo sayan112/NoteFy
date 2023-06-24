@@ -47,6 +47,6 @@ You can register a new account or login with an existing one.
 
 ## Team
 
-[![Sayan Maitra](https://avatars1.githubusercontent.com/u/51760520?v=3&s=144)](https://github.com/sayan112)
+[![Sayan Maitra]](https://github.com/sayan112)
 
 MIT © [Sayan Maitra](https://github.com/sayan112)
