@@ -45,8 +45,4 @@ You can register a new account or login with an existing one.
 - [Mongo DB](https://www.mongodb.com/)
 - [Bootstrap](http://getbootstrap.com/)
 
-## Team
-
-[![Sayan Maitra]](https://github.com/sayan112)
-
 MIT © [Sayan Maitra](https://github.com/sayan112)
